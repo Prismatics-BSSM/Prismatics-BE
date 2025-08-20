@@ -10,3 +10,12 @@ Prismatics-BE는 원소 스펙트럼 정보를 관리하고, 프론트엔드(Rea
 - Database: MySQL
 - ORM: Spring Data JPA
 - Architecture: Three-tier / Layered Architecture
+
+## 커밋 컨벤션
+
+- `feat`: 새로운 기능 추가
+- `fix`: 버그 수정
+- `docs`: 문서 작성 및 수정
+- `style`: 코드 포매팅, 스타일 변경 (기능 변경 없음)
+- `refactor`: 코드 리팩토링 (기능 변경 없음)
+- `chore`: 기타 변경사항 (빌드 스크립트, 환경설정 등)
