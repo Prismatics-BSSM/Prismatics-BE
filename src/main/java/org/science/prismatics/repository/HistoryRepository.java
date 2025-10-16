@@ -1,7 +1,7 @@
 package org.science.prismatics.repository;
 
-import org.science.prismatics.entity.History;
+import org.science.prismatics.entity.Histories;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface HistoryRepository extends JpaRepository<History, Long> {
+public interface HistoryRepository extends JpaRepository<Histories, Long> {
 }
