@@ -1,9 +1,10 @@
 package org.science.prismatics.dto.response;
 
+import org.science.prismatics.dto.WaveInfo;
+
 import java.util.List;
 
 public record SpectrumInfoResponse(
-        int id,
-        List<Integer> waves
+        List<WaveInfo> waves
 ) {
 }
