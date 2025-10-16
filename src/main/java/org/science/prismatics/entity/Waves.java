@@ -2,12 +2,14 @@ package org.science.prismatics.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table
-public class Wave {
+@Table(
+        name = "waves",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"element_id", "wavelength"})
+)
+public class Waves {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +19,9 @@ public class Wave {
     @JoinColumn(name = "element_id", nullable = false)
     private Elements element;
 
-    @Column(precision = 10, scale = 5)
-    private BigDecimal wavelength;
+    @Column(nullable = false)
+    private Integer wavelength;
+
+    @Column(nullable = false)
+    private Double alpha;
 }

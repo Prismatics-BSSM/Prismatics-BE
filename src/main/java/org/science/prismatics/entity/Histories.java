@@ -1,12 +1,15 @@
 package org.science.prismatics.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Data
 @Entity
-@Table(name = "history")
-public class History {
+@Table(name = "histories")
+public class Histories {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

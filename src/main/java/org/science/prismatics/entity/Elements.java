@@ -2,12 +2,11 @@ package org.science.prismatics.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.math.BigDecimal;
 import java.util.List;
 
 @Data
 @Entity
-@Table
+@Table(name = "elements")
 public class Elements {
 
     @Id
@@ -19,14 +18,13 @@ public class Elements {
     @Column(length = 30, nullable = false, unique = true)
     private String name;
 
-    @Column(precision = 10, scale = 5)
-    private BigDecimal weight;
+    @Column(name = "atomic_weight", nullable = false)
+    private Double atomicWeight;
 
     // 관계 매핑
     @OneToMany(mappedBy = "element", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Wave> waves;
+    private List<Waves> waves;
 
     @OneToMany(mappedBy = "element", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HistoryDetail> historyDetails;
-
 }
