@@ -21,6 +21,9 @@ public class Elements {
     @Column(name = "atomic_weight", nullable = false)
     private Double atomicWeight;
 
+    @Column(name = "has_spectrum_data", nullable = false)
+    private Boolean hasSpectrumData;
+
     // 관계 매핑
     @OneToMany(mappedBy = "element", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Waves> waves;
