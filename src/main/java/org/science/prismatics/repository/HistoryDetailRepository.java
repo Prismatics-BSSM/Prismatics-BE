@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface HistoryDetailRepository extends JpaRepository<HistoryDetail, Long> {
     @Query("select h from HistoryDetail h where h.history = :historyId")
-    List<HistoryDetail> findHistoryId(@Param("historyId") Long historyId);
+    List<HistoryDetail> findByHistoryId(@Param("historyId") Long historyId);
 }
