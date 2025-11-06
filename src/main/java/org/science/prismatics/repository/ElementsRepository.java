@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface ElementsRepository extends JpaRepository<Elements, Integer> {
     @Nonnull
-    Optional<Elements> findById(int Id);
+    Optional<Elements> findById(int id);
 }
