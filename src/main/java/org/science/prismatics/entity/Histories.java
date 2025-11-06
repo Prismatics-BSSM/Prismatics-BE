@@ -16,10 +16,10 @@ public class Histories {
     private Long id;
 
     // UUID → binary(16)
-    @Column(name = "user_id", columnDefinition = "BINARY(16)", nullable = false)
+    @Column(name = "user_id", nullable = false)
     private byte[] userId;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "datetime(6) default current_timestamp(6)")
     private LocalDateTime time;
 
     @OneToMany(mappedBy = "history", cascade = CascadeType.ALL, orphanRemoval = true)

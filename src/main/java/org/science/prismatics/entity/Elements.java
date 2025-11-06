@@ -21,7 +21,7 @@ public class Elements {
     @Column(name = "atomic_weight", nullable = false)
     private Double atomicWeight;
 
-    @Column(name = "has_spectrum_data", nullable = false)
+    @Column(name = "has_spectrum_data", nullable = false, columnDefinition = "boolean default true")
     private Boolean hasSpectrumData;
 
     // 관계 매핑
