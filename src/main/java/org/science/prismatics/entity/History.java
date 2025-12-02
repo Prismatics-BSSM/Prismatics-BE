@@ -17,7 +17,4 @@ public class History {
     @ManyToOne(optional = false)
     @JoinColumn(name = "user_id", nullable = false)
     private UserId user;
-
-    @Column(name = "time", nullable = false)
-    private LocalDateTime time;
 }
