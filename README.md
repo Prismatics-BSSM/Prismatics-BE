@@ -9,7 +9,7 @@ Prismatics-BE는 원소 스펙트럼 정보를 관리하고, 프론트엔드(Rea
 - Backend: Spring Boot 
 - Database: MySQL
 - ORM: Spring Data JPA
-- Architecture: Three-tier / Layered Architecture
+- Architecture: Monolithic
 
 ## 커밋 컨벤션
 
