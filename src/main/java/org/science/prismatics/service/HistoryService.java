@@ -10,4 +10,6 @@ import org.springframework.stereotype.Service;
 public class HistoryService {
     private final HistoryRepository historyRepository;
     private final HistoryDetailRepository historyDetailRepository;
+
+    
 }
