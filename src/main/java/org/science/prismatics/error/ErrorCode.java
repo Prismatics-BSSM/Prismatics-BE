@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 public enum ErrorCode {
     ELEMENT_NOT_FOUND(HttpStatus.NOT_FOUND, "Element Not Found"),
+    BAD_REQUEST(HttpStatus.BAD_REQUEST, "Bad Request"),
     INTERNAL_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "Internal Server Error Occurred"),;
 
     private final HttpStatus status;
