@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface WaveRepository extends JpaRepository<Wave, Long> {
-    @Query("select distinct w.wavelength from Wave w where w.element.id in :ids")
+    @Query("select distinct w.wavelength from Wave w where w.element.id in :ids order by w.wavelength")
     List<Integer> getWaveLengthsByIds(List<Integer> ids);
 }

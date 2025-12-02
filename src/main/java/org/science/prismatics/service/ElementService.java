@@ -11,7 +11,6 @@ import org.science.prismatics.repository.IonizationEnergyRepository;
 import org.science.prismatics.repository.WaveRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -33,7 +32,6 @@ public class ElementService {
     public SpectrumInfoResponse getSpectrumByElementIds(List<Integer> ids) {
         if (ids.isEmpty()) throw new BadRequestException();
         List<Integer> waves = waveRepository.getWaveLengthsByIds(ids);
-        waves.sort(Comparator.naturalOrder());
         return new SpectrumInfoResponse(waves);
     }
 }
