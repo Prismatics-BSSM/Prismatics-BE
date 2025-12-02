@@ -37,7 +37,7 @@ public class Element {
     private Double boilingPoint;
 
     @Column(name = "radius")
-    private Double radius;
+    private Integer radius;
 
     @Column(name = "discover", nullable = false, length = 10)
     private String discover;
