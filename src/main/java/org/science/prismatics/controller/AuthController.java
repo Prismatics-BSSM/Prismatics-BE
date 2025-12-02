@@ -1,13 +1,13 @@
 package org.science.prismatics.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.science.prismatics.service.ElementService;
+import org.science.prismatics.service.AuthService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/elements")
-public class ElementController {
-    private final ElementService elementService;
+@RequestMapping("/auth")
+public class AuthController {
+    private final AuthService authService;
 }
