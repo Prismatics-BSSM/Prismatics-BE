@@ -5,19 +5,18 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "history_details",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"history_id", "element_id"}))
-public class HistoryDetail {
+@Table(name = "waves",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"element_id", "wavelength"}))
+public class Wave {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "history_id", nullable = false)
-    private History history;
-
-    @ManyToOne(optional = false)
     @JoinColumn(name = "element_id", nullable = false)
     private Element element;
+
+    @Column(name = "wavelength", nullable = false)
+    private int wavelength;
 }
