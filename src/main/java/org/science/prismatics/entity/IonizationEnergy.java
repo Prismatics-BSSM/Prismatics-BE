@@ -20,6 +20,9 @@ public class IonizationEnergy {
     @JoinColumn(name = "element_id", nullable = false)
     private Element element;
 
+    @Column(name = "element_id", insertable = false, updatable = false)
+    private Integer elementId;
+
     @Column(name = "amount")
     private Double amount;
 
@@ -27,7 +30,6 @@ public class IonizationEnergy {
         private byte stage;
         private int element;
 
-        public PK() {
-        }
+        public PK() {}
     }
 }
