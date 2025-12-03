@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 public enum ErrorCode {
     ELEMENT_NOT_FOUND(HttpStatus.NOT_FOUND, "Element Not Found"),
     BAD_REQUEST(HttpStatus.BAD_REQUEST, "Bad Request"),
-    USERID_EXPIRED(HttpStatus.UNAUTHORIZED, "UserId Expired"),
+    USERID_INVALID(HttpStatus.UNAUTHORIZED, "UserId Invalid"),
     INTERNAL_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "Internal Server Error Occurred"),;
 
     private final HttpStatus status;
