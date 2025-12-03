@@ -44,4 +44,7 @@ public class Element {
 
     @Column(name = "state", nullable = false, length = 2)
     private String state;
+
+    @Column(name = "series", nullable = false, length = 15)
+    private String series;
 }

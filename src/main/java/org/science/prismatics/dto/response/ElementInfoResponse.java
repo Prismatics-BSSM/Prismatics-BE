@@ -17,6 +17,7 @@ public record ElementInfoResponse(
         Integer radius,
         String discover,
         String state,
+        String series,
         List<Double> ionizationEnergies
 ) {
     public static ElementInfoResponse from(Element element, List<Double> ionizationEnergies) {
@@ -33,6 +34,7 @@ public record ElementInfoResponse(
                 element.getRadius(),
                 element.getDiscover(),
                 element.getState(),
+                element.getSeries(),
                 ionizationEnergies
         );
     }
