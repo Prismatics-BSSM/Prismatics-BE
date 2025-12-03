@@ -38,7 +38,7 @@ public class AuthService {
         buf.putLong(uuid.getLeastSignificantBits());
         byte[] bytes = buf.array();
 
-        LocalDateTime expireTime = LocalDateTime.now().plusSeconds(300);
+        LocalDateTime expireTime = LocalDateTime.now().plusHours(3);
 
         UserId newUserId = new UserId();
         newUserId.setUserId(bytes);
