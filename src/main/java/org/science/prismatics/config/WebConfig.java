@@ -14,8 +14,8 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
+                        .allowedOrigins("http://localhost:5173", "https://prismatics.vercel.app")
+                        .allowedMethods("GET", "POST", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
